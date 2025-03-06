@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Writing Prompt</title>
+    <style>
+	span { text-align: center;}
+    </style>
+</head>
+<body>
+    <span>
+    <p><a href="/view_completed">View Completed Prompts</a> * <a href="/view">View Uncompleted Prompts</a></p>
+    <hr>
+    <h1>Add a Writing Prompt</h1>
+    <form action="/add" method="post">
+        <textarea name="prompt" rows="4" cols="50" required></textarea><br>
+        <button type="submit">Add Prompt</button>
+    </form>
+    </span>
+</body>
+</html>

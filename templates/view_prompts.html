@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Writing Prompts</title>
+</head>
+<body>
+    <center><p><a href="/">Add another prompt</a> * <a href="/view_completed">View Completed Prompts</a></p></center>
+    <hr>
+    <h1>Writing Prompts</h1>
+    <ul>
+	<hr>
+        {{range .}}
+            <li>[ID: {{.ID}}] {{.Prompt}} - {{.Timestamp}} 
+                <br><a href="/complete?id={{.ID}}">Mark as Completed</a>
+            </li>
+	<hr>
+        {{end}}
+    </ul>
+</body>
+</html>

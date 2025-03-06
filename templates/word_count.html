@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Writing Prompts</title>
+</head>
+<body>
+    <center>
+    <p><a href="/">Add another prompt</a> * <a href="/view_completed">View Completed Prompts</a></p>
+    <hr>
+    <h1>Word Count</h1>
+    <form action="/words/add" method="post">
+        <input type="number" name="wordcount" required><br>
+        <button type="submit">Add Prompt</button>
+    </form>
+    <hr>
+    <table border="2">
+        <tr><td>ID</td><td>Wordcount</td><td>Date</td></tr>
+        {{range .}}
+            <tr><td>{{.ID}}</td><td>{{.WordCount}}</td><td>{{.Timestamp}}</td></tr>
+        {{end}}
+    </table>
+    </center>
+</body>
+</html>
